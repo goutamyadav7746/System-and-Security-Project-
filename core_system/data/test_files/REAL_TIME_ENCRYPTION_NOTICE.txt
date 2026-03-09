@@ -1,0 +1,26 @@
+===============================================
+   REAL-TIME RANSOMWARE ATTACK SIMULATION
+===============================================
+
+YOUR FILES HAVE BEEN ENCRYPTED!
+
+Files affected: 0
+Extension added: .core_encrypted
+
+REAL-TIME PROTECTION:
+- Antivirus detected encryption during process
+- Auto-recovery key available: glKQ_5JGVBZPYhYMSzJr7QVOJBTPNiGqRRsbRmKGJdU=
+- Files can be restored immediately
+
+RECOVERY INSTRUCTIONS:
+1. The encryption key is: glKQ_5JGVBZPYhYMSzJr7QVOJBTPNiGqRRsbRmKGJdU=
+2. Use the backup_decryptor tool with this key
+3. Run: python simulators/backup_decryptor.py
+4. Enter the key when prompted
+
+THIS IS AN EDUCATIONAL DEMONSTRATION ONLY.
+NO ACTUAL PAYMENT REQUIRED.
+
+===============================================
+        EDUCATIONAL PURPOSES ONLY
+===============================================
