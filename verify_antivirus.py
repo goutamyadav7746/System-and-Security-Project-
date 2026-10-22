@@ -10,10 +10,11 @@ def verify_antivirus_scripts():
     print("=== ANTIVIRUS SCRIPT VERIFICATION ===")
     print()
     
-    # Check directories
-    core_test_dir = Path(r"C:\Users\Kanhaiya\System And Security\core_system\data\test_files")
+    # Check directories dynamically
+    base_dir = Path(__file__).resolve().parent
+    core_test_dir = base_dir / "core_system" / "data" / "test_files"
     backup_dir = Path(r"D:\Backup")
-    security_test_dir = Path(r"C:\Users\Kanhaiya\System And Security\security_tools\data\test_files")
+    security_test_dir = base_dir / "security_tools" / "data" / "test_files"
     
     print("DIRECTORY STATUS:")
     print(f"Core test files: {'✓ EXISTS' if core_test_dir.exists() else '✗ MISSING'} ({len(list(core_test_dir.iterdir())) if core_test_dir.exists() else 0} files)")
@@ -38,7 +39,7 @@ def verify_antivirus_scripts():
     # Security tools config (what guardian actually uses)
     try:
         import sys
-        sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security\security_tools")
+        sys.path.insert(0, str(base_dir / "security_tools"))
         from config import TEST_FILES_DIR, BEHAVIORAL_LOG_PATH
         print(f"Security tools TEST_FILES_DIR: {TEST_FILES_DIR}")
         print(f"Security tools BEHAVIORAL_LOG_PATH: {BEHAVIORAL_LOG_PATH}")
