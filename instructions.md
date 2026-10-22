@@ -62,7 +62,7 @@ python ../educational_demos/ransomware_process_test.py
 start_antivirus_core.bat
 
 # What this does:
-# - Monitors C:\Users\Kanhaiya\System And Security\core_system\data\test_files
+# - Monitors core_system/data/test_files directory
 # - Provides real-time threat detection
 # - Automatically terminates malicious processes
 # - Attempts file recovery during attacks
@@ -598,7 +598,7 @@ Create `custom_config.json`:
         "file_watch_patterns": ["*.txt", "*.doc", "*.pdf", "*.jpg", "*.png"],
         "directories": [
             "D:\\Backup",
-            "C:\\Users\\Kanhaiya\\System And Security\\core_system\\data\\test_files"
+            "core_system\\data\\test_files"
         ]
     },
     "detection": {
