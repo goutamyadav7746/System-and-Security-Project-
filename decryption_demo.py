@@ -8,8 +8,9 @@ import sys
 from pathlib import Path
 from cryptography.fernet import Fernet
 
-# Add paths
-sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security")
+# Add paths dynamically
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR))
 
 from integrated_dashboard_backend import IntegratedDashboardBackend
 
@@ -26,7 +27,7 @@ def demonstrate_active_decryption():
     print()
     
     # Setup test environment
-    test_dir = Path(r"C:\Users\Kanhaiya\System And Security\core_system\data\test_files")
+    test_dir = BASE_DIR / "core_system" / "data" / "test_files"
     
     # Create test file
     test_file = test_dir / "decryption_demo.txt"

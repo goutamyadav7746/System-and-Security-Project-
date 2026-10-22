@@ -120,7 +120,7 @@ class FileRecoveryTool:
         encrypted_files = []
         
         # Check core system test files
-        core_test_dir = Path(r'C:\Users\Kanhaiya\System And Security\core_system\data\test_files')
+        core_test_dir = Path(__file__).resolve().parent / 'data' / 'test_files'
         if core_test_dir.exists():
             for ext in self.supported_extensions:
                 for file_path in core_test_dir.glob(f'*{ext}'):

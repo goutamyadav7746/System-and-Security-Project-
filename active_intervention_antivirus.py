@@ -448,9 +448,9 @@ def run_intervention_demo():
     time.sleep(2)
     
     # Run encryption with intervention awareness
-    encryptor = InterventionAwareEncryptor(
-        r'C:\Users\Kanhaiya\System And Security\core_system\data\test_files'
-    )
+    base_dir = Path(__file__).resolve().parent
+    test_files_path = base_dir / "core_system" / "data" / "test_files"
+    encryptor = InterventionAwareEncryptor(str(test_files_path))
     
     print("Initiating encryption with active antivirus monitoring...")
     recovery_key = encryptor.encrypt_with_intervention_detection()

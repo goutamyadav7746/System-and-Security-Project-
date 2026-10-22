@@ -11,9 +11,10 @@ import threading
 from datetime import datetime
 from pathlib import Path
 
-# Add paths for imports
-sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security\core_system")
-sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security")
+# Add paths dynamically for imports
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR / "core_system"))
+sys.path.insert(0, str(BASE_DIR))
 
 from active_intervention_antivirus import ActiveInterventionAntivirus
 from monitor.monitor import BehaviorMonitor

@@ -7,9 +7,10 @@ import time
 import sys
 from pathlib import Path
 
-# Add paths
-sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security\core_system")
-sys.path.insert(0, r"C:\Users\Kanhaiya\System And Security")
+# Add paths dynamically
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE_DIR / "core_system"))
+sys.path.insert(0, str(BASE_DIR))
 
 from active_intervention_antivirus import ActiveInterventionAntivirus
 from real_encrypt_core import RealTimeFileEncryptor
@@ -27,7 +28,7 @@ def demonstrate_active_intervention():
     print()
     
     # Setup test environment
-    test_dir = Path(r"C:\Users\Kanhaiya\System And Security\core_system\data\test_files")
+    test_dir = BASE_DIR / "core_system" / "data" / "test_files"
     
     # Create some test files if needed
     if not any(test_dir.iterdir()):
